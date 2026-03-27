@@ -7,7 +7,7 @@ defineProps({
 <template>
   <header>
     <h1>Ibbu Leaks</h1>
-    <p>The largest repository of leaked Ibrahim Hameed photos</p>
+    <p>The world's largest repository of leaked Ibrahim Hameed photos</p>
     <span class="badge">{{ count }} photos</span>
   </header>
 </template>
