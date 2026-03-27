@@ -2,11 +2,13 @@
 defineProps({
   filename: String,
 })
+
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <template>
   <div class="card">
-    <img :src="`/photos/${filename}`" :alt="filename" loading="lazy" />
+    <img :src="`${baseUrl}photos/${filename}`" :alt="filename" loading="lazy" />
     <div class="label">{{ filename }}</div>
   </div>
 </template>

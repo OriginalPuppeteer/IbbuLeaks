@@ -7,6 +7,7 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['close', 'navigate'])
+const baseUrl = import.meta.env.BASE_URL
 
 function onKeydown(e) {
   if (e.key === 'Escape') emit('close')
@@ -22,7 +23,7 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
   <div class="lightbox" @click.self="emit('close')">
     <button class="close" @click="emit('close')">&times;</button>
     <button class="nav prev" @click="emit('navigate', -1)">&#8249;</button>
-    <img :src="`/photos/${photos[index]}`" :alt="photos[index]" />
+    <img :src="`${baseUrl}photos/${photos[index]}`" :alt="photos[index]" />
     <button class="nav next" @click="emit('navigate', 1)">&#8250;</button>
   </div>
 </template>
